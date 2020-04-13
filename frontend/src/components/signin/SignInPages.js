@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet'
 
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBInput, MDBBtn } from "mdbreact";
+
+
 
 class SignInPages extends Component {
 
@@ -36,7 +39,6 @@ class SignInPages extends Component {
                         label="Your password"
                         group
                         type="password"
-                        validate
                         containerClass="mb-0"
                       />
                       <p className="font-small blue-text d-flex justify-content-end pb-3">

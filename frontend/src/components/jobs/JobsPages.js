@@ -350,7 +350,7 @@ class JobsPages extends Component {
                                   <button type="button" className="btn get-trial-style">APPLY NOW</button>
                                 </MDBCol>
                                 <MDBCol md='5' >
-                                  <button type="button" className="btn get-trial-style">APPLY NOW</button>
+                                  <button type="button" className="bookmark-btn">SAVE THIS SEARCH </button>
                                 </MDBCol>
                               </MDBRow>
 

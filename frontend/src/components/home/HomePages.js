@@ -79,9 +79,9 @@ class HomePages extends Component {
   }
 
   componentDidMount() {
-   
+
     fetch("https://randomuser.me/api/?results=10&nat=au")
-    
+
       .then(res => res.json())
       .then(parsedJSON => parsedJSON.results.map(data => (
         {
@@ -100,8 +100,8 @@ class HomePages extends Component {
       .catch(error => console.log('parsing failed', error));
 
 
-      fetch("https://randomuser.me/api/?results=10&")
-    
+    fetch("https://randomuser.me/api/?results=10&")
+
       .then(res => res.json())
       .then(parsedJSON => parsedJSON.results.map(data => (
         {
@@ -110,7 +110,6 @@ class HomePages extends Component {
           lastName: `${data.name.last}`,
           location: `${data.location.state}, ${data.nat}`,
           thumbnail: `${data.picture.large}`,
-
         }
       )))
       .then(crew => this.setState({
@@ -124,11 +123,11 @@ class HomePages extends Component {
   rendrerTalents() {
     const { items } = this.state;
 
-    if ( items.length <= 0) {
+    if (items.length <= 0) {
       return <div>Loading...</div>
     }
 
-    else if (!items ) {
+    else if (!items) {
       return <div>Data Kosong</div>
     }
 
@@ -154,11 +153,11 @@ class HomePages extends Component {
   renderCrew() {
     const { crew } = this.state;
 
-    if ( crew.length <= 0) {
+    if (crew.length <= 0) {
       return <div>Loading...</div>
     }
 
-    else if (!crew ) {
+    else if (!crew) {
       return <div>Data Kosong</div>
     }
 
@@ -184,11 +183,11 @@ class HomePages extends Component {
   renderStuff() {
     const { items } = this.state;
 
-    if ( items.length <= 0) {
+    if (items.length <= 0) {
       return <div>Loading...</div>
     }
 
-    else if (!items ) {
+    else if (!items) {
       return <div>Data Kosong</div>
     }
 
@@ -376,8 +375,8 @@ class HomePages extends Component {
                     <Slider {...settings}>
 
 
-                    {this.renderCrew()}
-                     
+                      {this.renderCrew()}
+
 
 
 

@@ -14,6 +14,9 @@ import SignUpOptions from './components/signup/SignUpOptions';
 import NotFound from './components/common/notfound';
 import TestApi from './components/api/testapi';
 import CrudApi from './components/api/crudapi';
+
+import {PrivateRoute, GuestRoute} from "./components/Helpers/RestrictedRoutes";
+
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'mdbreact/dist/css/mdb.css';
 
@@ -29,18 +32,18 @@ class App extends Component {
         <Navmenu />
         <Route>
           <Switch>
-            <Route exact path="/" component={HomePages} />
-            <Route exact path="/talent" component={TalentPages} />
-            <Route exact path="/discover" component={DiscoverPages} />
-            <Route exact path="/jobs" component={JobsPages} />
-            <Route exact path="/services" component={ServicesPages} />
-            <Route exact path="/marketplace" component={MarketplacePages} />
-            <Route exact path="/signin" component={SignInPages} />
-            <Route exact path="/signup" component={SignUpPages} />
-            <Route exact path="/signupoptions" component={SignUpOptions} />
-            <Route exact path="/testapi" component={TestApi} />
-            <Route exact path="/crud" component={CrudApi} />
-            <Route component={NotFound} />
+            <GuestRoute exact path="/" component={HomePages} />
+            <GuestRoute exact path="/talent" component={TalentPages} />
+            <GuestRoute exact path="/discover" component={DiscoverPages} />
+            <GuestRoute exact path="/jobs" component={JobsPages} />
+            <GuestRoute exact path="/services" component={ServicesPages} />
+            <GuestRoute exact path="/marketplace" component={MarketplacePages} />
+            <GuestRoute exact path="/signin" component={SignInPages} />
+            <GuestRoute exact path="/signup" component={SignUpPages} />
+            <GuestRoute exact path="/signupoptions" component={SignUpOptions} />
+            <GuestRoute exact path="/testapi" component={TestApi} />
+            <GuestRoute exact path="/crud" component={CrudApi} />
+            <GuestRoute component={NotFound} />
           </Switch>
           <Footer />
 
