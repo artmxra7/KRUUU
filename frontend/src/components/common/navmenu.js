@@ -63,7 +63,7 @@ class Navmenu extends Component {
 
             <MDBNavbarNav right>
               <MDBNavItem >
-                <MDBNavLink to="/signup">SIGN UP</MDBNavLink>
+                <MDBNavLink to="/signupoptions">SIGN UP</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem >
                 <MDBNavLink to="/signin" className="button-nav sign-text">SIGN IN</MDBNavLink>

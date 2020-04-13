@@ -319,7 +319,7 @@ class HomePages extends Component {
                             <h1 className="block-title title with-bullet"> FIND YOUR JOB</h1>
                             <p className="text-center black-text text">Our job is making your job easier – and that means finding you the best digital, creative, and marketing talent.</p>
                             <Link to='/jobs'>
-                              <button href="/job" type="button" className="btn find-job">FIND JOB</button>
+                              <button type="button" className="btn find-job">FIND JOB</button>
                             </Link>
                           </div>
                         </div>
